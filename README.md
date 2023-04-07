@@ -18,7 +18,8 @@ Objectif:
     des points de (x, y) avec la valeur la plus grande. Enfin, nous traçons les droites sur l'image 
     à l'aide de l'équation yi = m*xi + p.
     La deuxième transformation de Hough travaille sur (r, theta) au lieu de (m, p). Elle transforme 
-    chaque point de notre matrice en courbe sinusoïdale, puis les étapes suivantes sont les mêmes que celles de la transformation de Hough classique.
+    chaque point de notre matrice en courbe sinusoïdale, puis les étapes suivantes sont les mêmes que
+    celles de la transformation de Hough classique.
 
 
 Explication de la première méthode :
