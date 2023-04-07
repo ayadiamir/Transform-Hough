@@ -24,7 +24,7 @@ Objectif:
     celles de la transformation de Hough classique.
 
 
-Explication de la première méthode :
+Expliquation de la première méthode :
 
 
        Le code définit une structure Point pour stocker les coordonnées d'un point dans un plan.
@@ -50,7 +50,7 @@ Explication de la première méthode :
        Enfin, le code écrit une image PPM de l'image traitée avec les droites détectées dans le fichier"hough_resultat.ppm".
 
 
-Explication de la deuxième méthode :
+Expliquation de la deuxième méthode :
 
 
       Dans ce cote on a créé  une structure de données appelée "Point" est définie pour
