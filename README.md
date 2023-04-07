@@ -14,6 +14,7 @@ Objectif:
 
       Dans ce projet, notre objectif est de détecter les droites présentes sur une image en
       utilisant la transformation de Hough.  Cette transformation se divise en deux parties :
+      
 La première partie est la transformation de Hough classique. Nous prenons une matrice d'image 
 et un pixel de cette matrice. Ensuite, nous appliquons la transformation de Hough sur ce pixel,
 ce qui nous donne une droite dans l'espace (m, p). Nous répétons cette étape pour un autre point 
@@ -32,21 +33,21 @@ Explication de la première méthode :
        ainsi que la taille M de l'image, et retourne un vecteur D de taille M contenant les valeurs 
        de la transformée de Hough pour cette position. Cette fonction utilise la formule de la transformée
        de Hough pour calculer les valeurs de D.
-      La fonction Score prend en entrée un vecteur Droite et une matrice Mat, et met à jour les valeurs 
-      de la matrice Mat en incrémentant de 1 les valeurs correspondant à la droite. Cette fonction est 
-      appelée dans la boucle principale du programme pour incrémenter les valeurs dans la matrice de vote.
-      La fonction main commence par initialiser les variables N et M à 10, et crée deux matrices image et
-      Matrice_vote de taille N x M. La matrice image contient des valeurs binaires de pixels pour représenter
-      une image. La matrice Matrice_vote est initialisée à zéro et sera mise à jour pour stocker les votes pour
-      chaque droite possible.
-Le code écrit également une image PPM de l'image originale dans le fichier "hough.ppm", qui peut être
-visualisée dans un éditeur d'image.
-     La boucle principale du programme commence par parcourir tous les pixels de l'image, et pour chaque 
-     pixel non nul, elle calcule le vecteur D de la transformée de Hough correspondant à ce pixel en appelant
-     trans_hough, puis met à jour la matrice de vote en appelant Score.
+       La fonction Score prend en entrée un vecteur Droite et une matrice Mat, et met à jour les valeurs 
+       de la matrice Mat en incrémentant de 1 les valeurs correspondant à la droite. Cette fonction est 
+       appelée dans la boucle principale du programme pour incrémenter les valeurs dans la matrice de vote.
+       La fonction main commence par initialiser les variables N et M à 10, et crée deux matrices image et
+       Matrice_vote de taille N x M. La matrice image contient des valeurs binaires de pixels pour représenter
+       une image. La matrice Matrice_vote est initialisée à zéro et sera mise à jour pour stocker les votes pour
+       chaque droite possible.
+       Le code écrit également une image PPM de l'image originale dans le fichier "hough.ppm", qui peut être
+       visualisée dans un éditeur d'image.
+       La boucle principale du programme commence par parcourir tous les pixels de l'image, et pour chaque 
+       pixel non nul, elle calcule le vecteur D de la transformée de Hough correspondant à ce pixel en appelant
+       trans_hough, puis met à jour la matrice de vote en appelant Score.
 
 
-    Ensuite, la boucle principale recherche les points maximums dans la matrice de vote, stocke les
+   Ensuite, la boucle principale recherche les points maximums dans la matrice de vote, stocke les
     coordonnées de ces points dans un vecteur de structures Point, et trace les droites correspondant 
     à ces points maximums dans l'image.
      Enfin, le code écrit une image PPM de l'image traitée avec les droites détectées dans le fichier"hough_resultat.ppm".
@@ -74,7 +75,7 @@ correspond à une ligne possible dans l'image.
  La méthode "saveImage" sauvegarde la matrice de votes de Hough dans un fichier au format PPM P3.
 
 
-         Enfin, dans la fonction "main", un exemple d'utilisation de la classe est présenté. 
+   Enfin, dans la fonction "main", un exemple d'utilisation de la classe est présenté. 
          Une instance de "HoughTransform" est créée avec une taille d'image de 50x50 pixels.
          Quatre points sont ajoutés à l'image, puis la transformation de Hough est calculée. 
          Enfin, la matrice de votes d
