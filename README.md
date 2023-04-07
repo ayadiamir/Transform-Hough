@@ -56,8 +56,8 @@ Explication de la première méthode :
 Explication de la deuxième méthode :
 
 
-      Dans ce cote on a créé  une structure de données appelée "Point" est définie pour
-      *stocker les coordonnées d'un point dans l'image.
+   Dans ce cote on a créé  une structure de données appelée "Point" est définie pour
+   *stocker les coordonnées d'un point dans l'image.
  Ensuite, une classe "HoughTransform" est définie pour stocker l'image et effectuer 
  la transformation de Hough.
 
