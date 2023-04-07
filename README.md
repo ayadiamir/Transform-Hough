@@ -43,9 +43,9 @@ Explication de la première méthode :
        pixel non nul, elle calcule le vecteur D de la transformée de Hough correspondant à ce pixel en appelant
        trans_hough, puis met à jour la matrice de vote en appelant Score.
        Ensuite, la boucle principale recherche les points maximums dans la matrice de vote, stocke les
-    coordonnées de ces points dans un vecteur de structures Point, et trace les droites correspondant 
-    à ces points maximums dans l'image.
-     Enfin, le code écrit une image PPM de l'image traitée avec les droites détectées dans le fichier"hough_resultat.ppm".
+       coordonnées de ces points dans un vecteur de structures Point, et trace les droites correspondant 
+       à ces points maximums dans l'image.
+       Enfin, le code écrit une image PPM de l'image traitée avec les droites détectées dans le fichier"hough_resultat.ppm".
 
 
 Explication de la deuxième méthode :
@@ -57,13 +57,13 @@ Explication de la deuxième méthode :
       la transformation de Hough.
 
 
-    Le constructeur de la classe prend deux arguments, la largeur et la hauteur de l'image. 
-    Il initialise ensuite la matrice de votes de Hough avec des zéros.
-    Les paramètres "rho_max_" et "num_theta_" sont utilisés pour calculer les dimensions de la matrice.
-    La méthode "addPoint" ajoute un point à l'image, tandis que la méthode "computeHoughTransform" 
-    calcule la transformation de Hough en parcourant chaque point dans l'image.
-    La méthode "saveImage" sauvegarde la matrice de votes de Hough dans un fichier au format PPM P3.
-     Enfin, dans la fonction "main", un exemple d'utilisation de la classe est présenté. 
-         Une instance de "HoughTransform" est créée avec une taille d'image de 50x50 pixels.
-         Quatre points sont ajoutés à l'image, puis la transformation de Hough est calculée. 
-         Enfin, la matrice de votes d
+      Le constructeur de la classe prend deux arguments, la largeur et la hauteur de l'image. 
+      Il initialise ensuite la matrice de votes de Hough avec des zéros.
+      Les paramètres "rho_max_" et "num_theta_" sont utilisés pour calculer les dimensions de la matrice.
+      La méthode "addPoint" ajoute un point à l'image, tandis que la méthode "computeHoughTransform" 
+      calcule la transformation de Hough en parcourant chaque point dans l'image.
+      La méthode "saveImage" sauvegarde la matrice de votes de Hough dans un fichier au format PPM P3.
+      Enfin, dans la fonction "main", un exemple d'utilisation de la classe est présenté. 
+      Une instance de "HoughTransform" est créée avec une taille d'image de 50x50 pixels.
+      Quatre points sont ajoutés à l'image, puis la transformation de Hough est calculée. 
+      Enfin, la matrice de votes d
