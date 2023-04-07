@@ -1,25 +1,24 @@
 # Transform-Hough
-Ce code C++ utilise la bibliothèque standard pour effectuer une transformation de Hough sur 
-une image constituée de points. La transformation de Hough est une technique de traitement 
-d'images qui permet de détecter des formes géométriques telles que des lignes  dans une image.
+    Ce code C++ utilise la bibliothèque standard pour effectuer une transformation de Hough sur 
+    une image constituée de points. La transformation de Hough est une technique de traitement 
+    d'images qui permet de détecter des formes géométriques telles que des lignes  dans une image.
 
 
 Objectif:
 
-
-  Dans ce projet, notre objectif est de détecter les droites présentes sur une image en
-  utilisant la transformation de Hough.  Cette transformation se divise en deux parties :
+    Dans ce projet, notre objectif est de détecter les droites présentes sur une image en
+    utilisant la transformation de Hough.  Cette transformation se divise en deux parties :
       
-La première partie est la transformation de Hough classique. Nous prenons une matrice d'image 
-et un pixel de cette matrice. Ensuite, nous appliquons la transformation de Hough sur ce pixel,
-ce qui nous donne une droite dans l'espace (m, p). Nous répétons cette étape pour un autre point 
-de notre image. Si les deux droites de ces deux points s'intersectent dans l'espace (m, p), cela 
-signifie que ces deux points sont alignés dans l'espace (x, y). Nous répétons ce processus pour 
-tous les points de l'image et nous récupérons dans l'espace (m, p) les intersections des droites
-des points de (x, y) avec la valeur la plus grande. Enfin, nous traçons les droites sur l'image 
-à l'aide de l'équation yi = m*xi + p.
-La deuxième transformation de Hough travaille sur (r, theta) au lieu de (m, p). Elle transforme 
-chaque point de notre matrice en courbe sinusoïdale, puis les étapes suivantes sont les mêmes que celles de la transformation de Hough classique.
+    La première partie est la transformation de Hough classique. Nous prenons une matrice d'image 
+    et un pixel de cette matrice. Ensuite, nous appliquons la transformation de Hough sur ce pixel,
+    ce qui nous donne une droite dans l'espace (m, p). Nous répétons cette étape pour un autre point 
+    de notre image. Si les deux droites de ces deux points s'intersectent dans l'espace (m, p), cela 
+    signifie que ces deux points sont alignés dans l'espace (x, y). Nous répétons ce processus pour 
+    tous les points de l'image et nous récupérons dans l'espace (m, p) les intersections des droites
+    des points de (x, y) avec la valeur la plus grande. Enfin, nous traçons les droites sur l'image 
+    à l'aide de l'équation yi = m*xi + p.
+    La deuxième transformation de Hough travaille sur (r, theta) au lieu de (m, p). Elle transforme 
+    chaque point de notre matrice en courbe sinusoïdale, puis les étapes suivantes sont les mêmes que celles de la transformation de Hough classique.
 
 
 Explication de la première méthode :
@@ -66,4 +65,4 @@ Explication de la deuxième méthode :
       Enfin, dans la fonction "main", un exemple d'utilisation de la classe est présenté. 
       Une instance de "HoughTransform" est créée avec une taille d'image de 50x50 pixels.
       Quatre points sont ajoutés à l'image, puis la transformation de Hough est calculée. 
-      Enfin, la matrice de votes d
+      Enfin, la matrice de votes de Hough est sauvegardée dans un fichier appelé "matrice_final.ppm".
