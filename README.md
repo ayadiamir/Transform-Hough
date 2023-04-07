@@ -12,8 +12,8 @@ d'images qui permet de détecter des formes géométriques telles que des lignes
 Objectif:
 
 
-      Dans ce projet, notre objectif est de détecter les droites présentes sur une image en
-      utilisant la transformation de Hough.  Cette transformation se divise en deux parties :
+  Dans ce projet, notre objectif est de détecter les droites présentes sur une image en
+  utilisant la transformation de Hough.  Cette transformation se divise en deux parties :
       
 La première partie est la transformation de Hough classique. Nous prenons une matrice d'image 
 et un pixel de cette matrice. Ensuite, nous appliquons la transformation de Hough sur ce pixel,
