@@ -92,18 +92,14 @@ int main()
     //Etape 3:
     //On trace les droites correspondant aux points maximum dans l'image
     for (auto p : points_max) {
-        vector<int> D(M);
-        for(int i=0;i<M;i++){
-            D[i]=p.y+p.x*i;
-            cout<<D[i]<<endl;
-        }
-        for(int j = 0; j < M; j++) {
-            int i = p.x - j + N -2;
+        
+        for(int i = 0; i < M; i++) {
+            int j = p.y +p.x*i;
             if(i>=0 && i<N) { 
-                image[i][M-1-j]=1; 
+                image[i][j]=1; 
             }
         }
-    }
+    }}
 
     
 
