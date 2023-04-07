@@ -1,4 +1,6 @@
 # Transform-Hough
+Itroduction:
+
     Ce code C++ utilise la bibliothèque standard pour effectuer une transformation de Hough sur 
     une image constituée de points. La transformation de Hough est une technique de traitement 
     d'images qui permet de détecter des formes géométriques telles que des lignes  dans une image.
