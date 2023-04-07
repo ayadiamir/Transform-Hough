@@ -40,8 +40,8 @@ int main()
     int value=0;
     std::vector<std::vector<int>> Matrice_vote(M, std::vector<int>(N)); 
     std::vector<std::vector<int>> image(N, std::vector<int>(M));
-    image[0][2]=50;
-    image[0][1]=50;
+    image[1][1]=50;
+    image[8][8]=50;
 
 
     ofstream fichier("hough.ppm");
@@ -92,15 +92,17 @@ int main()
     //Etape 3:
     //On trace les droites correspondant aux points maximum dans l'image
     for (auto p : points_max) {
-        
-            for(int i = 0; i < M; i++) {
-                //int i = p.x - j + N-2 ;
-                int j=p.y+p.x*i;
-                if(i>=0 && i<N) { 
-                    image[i][j]=1; 
+        vector<int> D(M);
+        for(int i=0;i<M;i++){
+            D[i]=p.y+p.x*i;
+            cout<<D[i]<<endl;
+        }
+        for(int j = 0; j < M; j++) {
+            int i = p.x - j + N -2;
+            if(i>=0 && i<N) { 
+                image[i][M-1-j]=1; 
             }
         }
-        
     }
 
     
