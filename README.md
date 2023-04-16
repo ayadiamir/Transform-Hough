@@ -30,24 +30,25 @@ Expliquation de la première méthode :
        Le code définit une structure Point pour stocker les coordonnées d'un point dans un plan.
        La fonction trans_hough prend en entrée les coordonnées x et y d'un point dans une image,
        ainsi que la taille M de l'image, et retourne un vecteur D de taille M contenant les valeurs 
-       de la transformée de Hough pour cette position. Cette fonction utilise la formule de la transformée
-       de Hough pour calculer les valeurs de D.
+       de la transformée de Hough pour cette position. Cette fonction utilise la formule de la 
+       transformée de Hough pour calculer les valeurs de D.
        La fonction Score prend en entrée un vecteur Droite et une matrice Mat, et met à jour les valeurs 
        de la matrice Mat en incrémentant de 1 les valeurs correspondant à la droite. Cette fonction est 
        appelée dans la boucle principale du programme pour incrémenter les valeurs dans la matrice de vote.
        La fonction main commence par initialiser les variables N et M à 10, et crée deux matrices image et
        Matrice_vote de taille N x M. La matrice image contient des valeurs binaires de pixels pour représenter
-       une image. La matrice Matrice_vote est initialisée à zéro et sera mise à jour pour stocker les votes pour
-       chaque droite possible.
+       une image. La matrice Matrice_vote est initialisée à zéro et sera mise à jour pour stocker les votes 
+       pour chaque droite possible.
        Le code écrit également une image PPM de l'image originale dans le fichier "hough.ppm", qui peut être
        visualisée dans un éditeur d'image.
        La boucle principale du programme commence par parcourir tous les pixels de l'image, et pour chaque 
-       pixel non nul, elle calcule le vecteur D de la transformée de Hough correspondant à ce pixel en appelant
-       trans_hough, puis met à jour la matrice de vote en appelant Score.
+       pixel non nul, elle calcule le vecteur D de la transformée de Hough correspondant à ce pixel en 
+       appelant trans_hough, puis met à jour la matrice de vote en appelant Score.
        Ensuite, la boucle principale recherche les points maximums dans la matrice de vote, stocke les
        coordonnées de ces points dans un vecteur de structures Point, et trace les droites correspondant 
        à ces points maximums dans l'image.
-       Enfin, le code écrit une image PPM de l'image traitée avec les droites détectées dans le fichier"hough_resultat.ppm".
+       Enfin, le code écrit une image PPM de l'image traitée avec les droites détectées dans le 
+       fichier"hough_resultat.ppm".
 
 
 Expliquation de la deuxième méthode :
